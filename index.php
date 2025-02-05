@@ -1,36 +1,21 @@
-<?php
-    include './DB/connect.php';
+<?php 
+include 'includes/db.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD COMPLETO PHP</title>
+    <title>Sistema de Reservas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <header>
+    <h1>Sistema de Reservas para Espaços Compartilhados</h1>
+    <nav>
         <ul>
-            <li> <a href="index.php"> Cadastrar </a> </li>
-            <li> <a href="listar.php"> Listar </a> </li>
+            <li><a href="pages/espacos.php">Gerenciar Espaços</a></li>
+            <li><a href="pages/usuarios.php">Gerenciar Usuários</a></li>
+            <li><a href="pages/reservas.php">Gerenciar Reservas</a></li>
         </ul>
-    </header>
-    <h1> Cadastro de Cliente</h1>
-    <form method="POST" action="cadastra_cli.php">
-        <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
-        <br>
-        <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf">
-        <br>
-        <input type="text" name="fone" id="fone" placeholder="Digite seu telefone">
-        <br>
-        <input type="text" name="email" id="email" placeholder="Digite seu email">
-        <br>
-        <input type="password" name="pass" id="pass" placeholder="Digite sua senha">
-        <br>
-        <input type="password" name="conf_pass" id="conf_pass" placeholder="Confirme sua senha">
-        <br>
-        <input class="btn btn-success" type="submit" name="cadastrar" id="bot" value="cadastrar">
-    </form>
+    </nav>
 </body>
 </html>
