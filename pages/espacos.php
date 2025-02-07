@@ -6,7 +6,7 @@ include '../includes/db.php';
 <head>
     <meta charset="UTF-8">
     <title>Gerenciar Espaços</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <h1>Gerenciar Espaços</h1>
@@ -15,7 +15,7 @@ include '../includes/db.php';
         Tipo: <input type="text" name="tipo" required><br>
         Capacidade: <input type="number" name="capacidade" required><br>
         Descrição: <textarea name="descricao"></textarea><br>
-        <input type="submit" name="cadastrar" value="Cadastrar Espaço">
+        <input type="submit" name="cadastrar" class="button" value="Cadastrar Espaço">
     </form>
 
     <?php
@@ -37,7 +37,7 @@ include '../includes/db.php';
     echo "<h2>Espaços Cadastrados</h2>";
     echo "<ul>";
     foreach ($espacos as $espaco) {
-        echo "<li>{$espaco['nome']} - {$espaco['tipo']} (Capacidade: {$espaco['capacidade']}) <a href='editar_espaco.php?id={$espaco['id']}'>Editar</a> <a href='excluir_espaco.php?id={$espaco['id']}'>Excluir</a></li>";
+        echo "<li>{$espaco['nome']} - {$espaco['tipo']} (Capacidade: {$espaco['capacidade']}) <a href='editar_espaco.php?id={$espaco['id']}' class='button'>Editar</a> <a href='excluir_espaco.php?id={$espaco['id']}' class='button delete'>Excluir</a></li>";
     }
     echo "</ul>";
     ?>

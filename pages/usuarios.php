@@ -6,7 +6,7 @@ include '../includes/db.php';
 <head>
     <meta charset="UTF-8">
     <title>Gerenciar Usuários</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <h1>Gerenciar Usuários</h1>
@@ -34,7 +34,7 @@ include '../includes/db.php';
     echo "<h2>Usuários Cadastrados</h2>";
     echo "<ul>";
     foreach ($usuarios as $usuario) {
-        echo "<li>{$usuario['nome']} - {$usuario['email']} <a href='editar_usuario.php?id={$usuario['id']}'>Editar</a> <a href='excluir_usuario.php?id={$usuario['id']}'>Excluir</a></li>";
+        echo "<li>{$usuario['nome']} - {$usuario['email']} <a href='editar_usuario.php?id={$usuario['id']}' class='button'>Editar</a> <a href='excluir_usuario.php?id={$usuario['id']}' class='button delete'>Excluir</a></li>";
     }
     echo "</ul>";
     ?>
