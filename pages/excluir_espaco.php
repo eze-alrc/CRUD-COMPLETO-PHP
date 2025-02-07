@@ -1,16 +1,20 @@
 <?php
 include '../includes/db.php';
 
-if(isset($_GET['id'])){
+// Verifica se o ID do espaço foi passado na URL
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
 
-    $id_recebido = $_GET['id'];
-    $sql = "DELETE FROM espacos WHERE id = $id_recebido";
-    $result = mysqli_query($conn,$sql);
+    // Exclui o espaço do banco de dados
+    $stmt = $conn->prepare("DELETE FROM espacos WHERE id = :id");
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
 
-    if($result){
-        echo '<script> alert("Excluido com sucesso!") </script>';
-    }else{
-        echo '<script> alert("Erro ao excluir!") </script>';
-    }
+    // Redireciona de volta para a lista de espaços
+    header("Location: espacos.php");
+    exit();
+} else {
+    echo "ID do espaço não fornecido.";
+    exit();
 }
 ?>

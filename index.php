@@ -12,9 +12,9 @@ include 'includes/db.php';
     <h1>Sistema de Reservas para Espaços Compartilhados</h1>
     <nav>
         <ul>
-            <li><a href="pages/espacos.php">Gerenciar Espaços</a></li>
-            <li><a href="pages/usuarios.php">Gerenciar Usuários</a></li>
-            <li><a href="pages/reservas.php">Gerenciar Reservas</a></li>
+            <li><a href="pages/espacos.php" class="text-decoration-none">Gerenciar Espaços</a></li>
+            <li><a href="pages/usuarios.php" class="text-decoration-none">Gerenciar Usuários</a></li>
+            <li><a href="pages/reservas.php" class="text-decoration-none">Gerenciar Reservas</a></li>
         </ul>
     </nav>
 </body>
